@@ -1,0 +1,736 @@
+{
+    "title": "LetMC Api V2, Free (Tier 1)",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/letmc.com/free-tier/v2-free-tier/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://live-api.letmc.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "auth_apiKey": {
+                "label": "ApiKey (apiKey)",
+                "viewClass": "TextFieldView",
+                "note": "ApiKey Authentication"
+            },
+            "auth_username": {
+                "label": "Username (basic)",
+                "viewClass": "TextFieldView",
+                "note": "Basic HTTP Authentication"
+            },
+            "auth_password": {
+                "label": "Password (basic)",
+                "viewClass": "TextFieldView",
+                "note": "Basic HTTP Authentication"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_v2_tier1__shortName__area_areas": {
+            "main": "./lib/actions/get_v2_tier1__shortName__area_areas.js",
+            "title": "A collection of all the areas for a company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__area_areas.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__area_areas__areaID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__area_areas__areaID_.js",
+            "title": "Get a specific area given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__area_areas__areaID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__branch_branches": {
+            "main": "./lib/actions/get_v2_tier1__shortName__branch_branches.js",
+            "title": "All branches defined for a company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__branch_branches.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__branch_branches__branchID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__branch_branches__branchID_.js",
+            "title": "Get a specific branch given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__branch_branches__branchID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CompanyController_GetCompany": {
+            "main": "./lib/actions/CompanyController_GetCompany.js",
+            "title": "Information about a specific company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CompanyController_GetCompany.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__county_counties": {
+            "main": "./lib/actions/get_v2_tier1__shortName__county_counties.js",
+            "title": "A collection of all counties available for a company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__county_counties.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__county_counties__countyID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__county_counties__countyID_.js",
+            "title": "Get a specific county given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__county_counties__countyID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CountyController_GetCountiesBranches": {
+            "main": "./lib/actions/CountyController_GetCountiesBranches.js",
+            "title": "A collection of branches that manage a specific county",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CountyController_GetCountiesBranches.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__diary_allocations": {
+            "main": "./lib/actions/get_v2_tier1__shortName__diary_allocations.js",
+            "title": "A collection of all diary allocations",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__diary_allocations.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__diary_allocations__diaryAllocationID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__diary_allocations__diaryAllocationID_.js",
+            "title": "Get a specific diary allocation given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__diary_allocations__diaryAllocationID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__diary_appointments": {
+            "main": "./lib/actions/get_v2_tier1__shortName__diary_appointments.js",
+            "title": "A collection of all diary appointments",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__diary_appointments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__diary_appointments__diaryAppointmentID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__diary_appointments__diaryAppointmentID_.js",
+            "title": "Get a specific diary appointment given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__diary_appointments__diaryAppointmentID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__diary_appointmenttypes": {
+            "main": "./lib/actions/get_v2_tier1__shortName__diary_appointmenttypes.js",
+            "title": "A collection of all diary appointment types",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__diary_appointmenttypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__diary_appointmenttypes__diaryAppointmentTypeID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__diary_appointmenttypes__diaryAppointmentTypeID_.js",
+            "title": "Get a specific diary appointment type given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__diary_appointmenttypes__diaryAppointmentTypeID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LettingsController_GetAdvertised": {
+            "main": "./lib/actions/LettingsController_GetAdvertised.js",
+            "title": "Search all properties available for rent given a range of search criteria.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LettingsController_GetAdvertised.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LettingsController_GetAdvertisedBetweenDates": {
+            "main": "./lib/actions/LettingsController_GetAdvertisedBetweenDates.js",
+            "title": "Search all properties available for rent given a range of search criteria and dates.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LettingsController_GetAdvertisedBetweenDates.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__lettings_tenancies": {
+            "main": "./lib/actions/get_v2_tier1__shortName__lettings_tenancies.js",
+            "title": "A collection of all the company's tenancies",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__lettings_tenancies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__lettings_tenancies__tenancyID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__lettings_tenancies__tenancyID_.js",
+            "title": "Get a specific tenancy given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__lettings_tenancies__tenancyID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LettingsController_GetTenancyBrochure": {
+            "main": "./lib/actions/LettingsController_GetTenancyBrochure.js",
+            "title": "Downloads the brochure relating to the latest advertised rental of a property",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LettingsController_GetTenancyBrochure.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__photo_photos": {
+            "main": "./lib/actions/get_v2_tier1__shortName__photo_photos.js",
+            "title": "A collection of all photos in the company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__photo_photos.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__photo_photos__photoID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__photo_photos__photoID_.js",
+            "title": "Get a specific photo given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__photo_photos__photoID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PhotoController_GetPhotoDownload": {
+            "main": "./lib/actions/PhotoController_GetPhotoDownload.js",
+            "title": "Downloads the photo of a property given the property and photo ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PhotoController_GetPhotoDownload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__property_properties": {
+            "main": "./lib/actions/get_v2_tier1__shortName__property_properties.js",
+            "title": "A collection of all properties within a company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__property_properties.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__property_properties__propertyID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__property_properties__propertyID_.js",
+            "title": "Get a specific property given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__property_properties__propertyID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PropertyController_GetPropertiesFacilities": {
+            "main": "./lib/actions/PropertyController_GetPropertiesFacilities.js",
+            "title": "A collection of facilities linked to a block, property or room",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PropertyController_GetPropertiesFacilities.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PropertyController_GetPropertiesPhotos": {
+            "main": "./lib/actions/PropertyController_GetPropertiesPhotos.js",
+            "title": "A collection showing all the photos linked to a specific block, property or room",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PropertyController_GetPropertiesPhotos.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PropertyController_GetPropertiesRooms": {
+            "main": "./lib/actions/PropertyController_GetPropertiesRooms.js",
+            "title": "A collection of the rooms that belong to this property or block",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PropertyController_GetPropertiesRooms.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PropertyController_GetPropertiesTenancies": {
+            "main": "./lib/actions/PropertyController_GetPropertiesTenancies.js",
+            "title": "A collection of all tenancies associated with this block, property or room",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PropertyController_GetPropertiesTenancies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PropertyController_GetPropertyEERDownload": {
+            "main": "./lib/actions/PropertyController_GetPropertyEERDownload.js",
+            "title": "Downloads the energy efficiency report (EER) graph for a property",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PropertyController_GetPropertyEERDownload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PropertyController_GetPropertyEIRDownload": {
+            "main": "./lib/actions/PropertyController_GetPropertyEIRDownload.js",
+            "title": "Downloads the environmental impact report (EIR) graph for a property",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PropertyController_GetPropertyEIRDownload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SalesController_GetAdvertisedSales": {
+            "main": "./lib/actions/SalesController_GetAdvertisedSales.js",
+            "title": "Search all sales properties available given a range of search criteria",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SalesController_GetAdvertisedSales.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SalesController_GetEER": {
+            "main": "./lib/actions/SalesController_GetEER.js",
+            "title": "Downloads the energy efficiency report (EER) graph for a sales instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SalesController_GetEER.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SalesController_GetEIR": {
+            "main": "./lib/actions/SalesController_GetEIR.js",
+            "title": "Downloads the energy efficiency report (EIR) graph for a sales instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SalesController_GetEIR.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__sales_salesfeaturetypes": {
+            "main": "./lib/actions/get_v2_tier1__shortName__sales_salesfeaturetypes.js",
+            "title": "A collection of all sales feature types linked to a company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__sales_salesfeaturetypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__sales_salesfeaturetypes__salesFeatureTypeID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__sales_salesfeaturetypes__salesFeatureTypeID_.js",
+            "title": "Get a specific sales feature type given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__sales_salesfeaturetypes__salesFeatureTypeID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__sales_salesinstructions": {
+            "main": "./lib/actions/get_v2_tier1__shortName__sales_salesinstructions.js",
+            "title": "A collection of all sales instructions linked to a company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__sales_salesinstructions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__sales_salesinstructions__salesInstructionID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__sales_salesinstructions__salesInstructionID_.js",
+            "title": "Get a specific sales instruction given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__sales_salesinstructions__salesInstructionID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SalesController_GetSalesInstructionsFeatures": {
+            "main": "./lib/actions/SalesController_GetSalesInstructionsFeatures.js",
+            "title": "A collection of all features linked to a sales instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SalesController_GetSalesInstructionsFeatures.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SalesController_GetSalesInstructionsFloorPlans": {
+            "main": "./lib/actions/SalesController_GetSalesInstructionsFloorPlans.js",
+            "title": "A collection of floor plans linked to an instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SalesController_GetSalesInstructionsFloorPlans.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SalesController_GetSalesInstructionsPhotos": {
+            "main": "./lib/actions/SalesController_GetSalesInstructionsPhotos.js",
+            "title": "A collection of photos linked to an instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SalesController_GetSalesInstructionsPhotos.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SalesController_GetSalesInstructionsRooms": {
+            "main": "./lib/actions/SalesController_GetSalesInstructionsRooms.js",
+            "title": "A collection of rooms linked to an instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SalesController_GetSalesInstructionsRooms.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__staff_staff": {
+            "main": "./lib/actions/get_v2_tier1__shortName__staff_staff.js",
+            "title": "A collection of all the staff members linked to a specific company",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__staff_staff.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v2_tier1__shortName__staff_staff__applicationStaffID_": {
+            "main": "./lib/actions/get_v2_tier1__shortName__staff_staff__applicationStaffID_.js",
+            "title": "Get a specific application staff given its unique Object ID (OID)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v2_tier1__shortName__staff_staff__applicationStaffID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

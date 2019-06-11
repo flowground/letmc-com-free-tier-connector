@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "shortName": {
+            "required": true,
+            "type": "string"
+        },
+        "branchID": {
+            "required": true,
+            "type": "string"
+        },
+        "offset": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "count": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "onlyDevelopement": {
+            "required": true,
+            "type": "boolean"
+        },
+        "onlyInvestements": {
+            "required": true,
+            "type": "boolean"
+        },
+        "minimumPrice": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "maximumPrice": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "minimumBeds": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "minimumBathrooms": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "minimumEnsuites": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "minimumToilets": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "minimumReception": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

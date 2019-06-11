@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "shortName": {
+            "required": true,
+            "type": "string"
+        },
+        "salesInstructionID": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

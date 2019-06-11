@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "shortName": {
+            "required": true,
+            "type": "string"
+        },
+        "branchID": {
+            "required": true,
+            "type": "string"
+        },
+        "offset": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "count": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "areaID": {
+            "required": false,
+            "type": "string"
+        },
+        "rentMinimum": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "rentMaximum": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "maximumTenants": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "wantSharedProperties": {
+            "required": false,
+            "type": "boolean"
+        },
+        "wantStudentProperties": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}
